@@ -26,8 +26,16 @@ tr, td {
 	color: white;
 }
 
+
 h1 {
 	font-family: DemonSlayer;
 	font-size: 50px;
 	text-shadow: 2px 2px red;
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%:
+
 }
