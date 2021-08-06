@@ -1,3 +1,8 @@
+@font-face {
+	font-family: DemonSlayer;
+	src: url(bloodcrow.ttf);
+}
+
 table {
 	border: 1px solid silver;
 }
@@ -8,11 +13,21 @@ td:hover {
 }
 
 tr, th {
+	font-family: DemonSlayer;
+	font-size: 30px;
 	background-color: #1E90FF;
-	color: white;
+	color: black;
 }
 
 tr, td {
+	font-family: "Apple Chancery", cursive;
+	font-size: 20px;
 	background-color: #4682B4;
 	color: white;
+}
+
+h1 {
+	font-family: DemonSlayer;
+	font-size: 50px;
+	text-shadow: 2px 2px red;
 }
