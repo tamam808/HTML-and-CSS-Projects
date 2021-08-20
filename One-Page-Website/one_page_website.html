@@ -3,19 +3,7 @@
 	<head>
 		<title>Los Angeles Lakers&copy;</title>
 		<meta charset="utf-8">
-		<style>
-			.header {
-				width: 100%;
-				height: 200px;
-				object-fit: cover;
-			}
-			
-			img {
-				width: 650px;
-				height: 500px;
-			}
-			
-		</style>
+		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
 	</head>
 	<body>
 		
@@ -66,7 +54,7 @@
 		<!-- END GALLERY -->
 		
 		<!-- HIGHLIGHTS -->
-		<section>
+		<section id="highlights">
 			<h3 style="text-align: center"><u>HIGHLIGHTS</u></h3>
 			<div id="video" style="text-align: center">
 				<iframe width="750" height="500"
@@ -79,14 +67,16 @@
 		
 		<!-- SIGNUP -->
 		<section id="contact">
-			<div>
-				<h3 style="text-align: center"><u>SIGNUP</u></h3>
-					<p style="text-align: center">
-					Submit your basic information here to stay up
-					to date on new free agent signings as
-					well as game results.
-					</p>
-				<div style="text-align: center">
+			<div class="signup">
+				<div class="signup-text">
+					<h3><u>SIGNUP</u></h3>
+						<p>
+						Submit your basic information here to stay up
+						to date on new free agent signings as
+						well as game results.
+						</p>
+				</div>
+				<div class="signup-form">
 					<form action="" method="post">
 						First name: <input type="text" name="First_Name"><br>
 						Last name: <input type="text" name="Last_Name"><br>
@@ -102,7 +92,7 @@
 		<!-- END SIGNUP -->
 		
 		<!-- FOOTER -->
-		<div style="text-align: center">
+		<div class="footer">
 			Los Angeles Lakers&copy; | Est. 1947
 		</div>
 		<!-- END FOOTER -->
