@@ -4,6 +4,7 @@
 		<title>Los Angeles Lakers&copy;</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+		<script src="./JS/one_page_website.js" defer></script>
 	</head>
 	<body>
 		
@@ -38,17 +39,110 @@
 		<!-- END HOME -->
 		
 		<!-- GALLERY -->
-		<section style="text-align: center">
+		<section>
 			<h2 id="gallery" style="text-align: center"><u>GALLERY</u></h2>
 				
-			<div>
-				<img src="./images/anthonydavis.png" alt="Anthony Davis">&nbsp;
-				<img src="./images/lebron.png" alt="Lebron James"><br>
-				<img src="./images/westbrook.png" alt="Russell Westbrook">&nbsp;
-				<img src="./images/carmelo.png" alt="Carmelo Anthony"><br>
-				<img src="./images/howard.png" alt="Dwight Howard">&nbsp;
-				<img src="./images/tucker.png" alt="Talen Horton-Tucker"><br>
-				<br>
+			<div class="row">
+				<div class="column">
+					<img src="./images/anthonydavis.png" onclick="openModal();currentSlide(1)" 
+						class="hover-shadow cursor" alt="Anthony Davis">
+				</div>
+				<div class="column">
+					<img src="./images/lebron.png" onclick="openModal();currentSlide(2)" 
+						class="hover-shadow cursor" alt="Lebron James">
+				</div>
+				<div class="column">
+					<img src="./images/westbrook.png" onclick="openModal();currentSlide(3)" 
+						class="hover-shadow cursor" alt="Russell Westbrook">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column">
+					<img src="./images/carmelo.png" onclick="openModal();currentSlide(4)" 
+						class="hover-shadow cursor" alt="Carmelo Anthony">
+				</div>
+				<div class="column">
+					<img src="./images/howard.png" onclick="openModal();currentSlide(5)" 
+						class="hover-shadow cursor" alt="Dwight Howard">
+				</div>
+				<div class="column">
+					<img src="./images/tucker.png" onclick="openModal();currentSlide(6)" 
+						class="hover-shadow cursor" alt="Talen Horton-Tucker">
+				</div>
+			</div>
+
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 6</div>
+						<img src="./images/anthonydavis.png" style="width: 100%;">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 6</div>
+						<img src="./images/lebron.png" style="width: 100%;">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 6</div>
+						<img src="./images/westbrook.png" style="width: 100%;">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 6</div>
+						<img src="./images/carmelo.png" style="width: 100%;">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+						<img src="./images/howard.png" style="width: 100%;">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+						<img src="./images/tucker.png" style="width: 100%;">
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<div class="thumb">
+						<img class="demo cursor" src="./images/anthonydavis.png" onclick="currentSlide(1)"
+							alt="Anthony Davis">
+					</div>
+
+					<div class="thumb">
+						<img class="demo cursor" src="./images/lebron.png" onclick="currentSlide(2)"
+							alt="Lebron James">
+					</div>
+
+					<div class="thumb">
+						<img class="demo cursor" src="./images/westbrook.png" onclick="currentSlide(3)"
+							alt="Russell Westbrook">
+					</div>
+
+					<div class="thumb">
+						<img class="demo cursor" src="./images/carmelo.png" onclick="currentSlide(4)"
+							alt="Carmelo Anthony">
+					</div>
+
+					<div class="thumb">
+						<img class="demo cursor" src="./images/howard.png" onclick="currentSlide(5)"
+							alt="Dwight Howard">
+					</div>
+
+					<div class="thumb">
+						<img class="demo cursor" src="./images/tucker.png" onclick="currentSlide(6)"
+							alt="Talen Horton-Tucker">
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- END GALLERY -->
@@ -57,8 +151,11 @@
 		<section id="highlights">
 			<h3 style="text-align: center"><u>HIGHLIGHTS</u></h3>
 			<div id="video" style="text-align: center">
-				<iframe width="750" height="500"
-				src="https://www.youtube.com/embed/WqNIl7lXvA">
+				<iframe width="750" height="500" 
+					src="https://www.youtube.com/embed/1mfKzCKDRAc" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
 				</iframe>
 				<br>
 			</div>
