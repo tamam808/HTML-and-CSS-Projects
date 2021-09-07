@@ -63,13 +63,13 @@
                     <h3>Now Playing:</h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a class="nav-link" href="#">Pitch Perfect</a>
+                            <a class="nav-link" href="#pitchperfect">Pitch Perfect</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="nav-link" href="#">Star Wars: Revenge of the Sith</a>
+                            <a class="nav-link" href="#starwars">Star Wars: Revenge of the Sith</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="nav-link" href="#">Free Guy</a>
+                            <a class="nav-link" href="#freeguy">Free Guy</a>
                         </li>
                     </ul>
 
@@ -81,63 +81,108 @@
 
         <div class="container" id="showtimes">
             <div class="row">
-              <div class="col-sm">
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="./img/pitchperfect.png" alt="Pitch Perfect">
-                    <div class="card-body">
-                      <h5 class="card-title">Pitch Perfect</h5>
-                      <p class="card-text">The Barden Bellas are a collegiate, all-girls a cappella singing group thriving on female pop songs and their perfect looks. After a disastrous failing at last year's finals, they are forced to regroup. Among the new recruits is freshman Beca, an independent, aspiring DJ with no interest in the college life.</p>
-                      <span class="badge badge-pill badge-info">12:00pm</span>
-                      <span class="badge badge-pill badge-info">1:30pm</span>
-                      <span class="badge badge-pill badge-info">3:00pm</span>
-                      <span class="badge badge-pill badge-info">5:30pm</span>
-                      <span class="badge badge-pill badge-info">7:00pm</span>
-                      <span class="badge badge-pill badge-info">9:30pm</span>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="./img/starwars.png" alt="Star Wars">
-                    <div class="card-body">
-                      <h5 class="card-title">Star Wars: Revenge of the Sith</h5>
-                      <p class="card-text">The Jedi Order is on the brink of collapse and Anakin Skywalker no longer believes in the wisdom of his master, Obi-Wan Kenobi. As The Force calls him to decide Padme's fate, Anakin will desperately explore every possibility to save his wife from imminent death in childbirth.</p>
-                      <span class="badge badge-pill badge-info">12:00pm</span>
-                      <span class="badge badge-pill badge-info">1:30pm</span>
-                      <span class="badge badge-pill badge-info">3:00pm</span>
-                      <span class="badge badge-pill badge-info">5:30pm</span>
-                      <span class="badge badge-pill badge-info">7:00pm</span>
-                      <span class="badge badge-pill badge-info">9:30pm</span>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                <div class="col-sm">
+                    <div class="card" style="width: 20rem;" id="pitchperfect">
+                        <img class="card-img-top" src="./img/pitchperfect.png" alt="Pitch Perfect">
+                        <div class="card-body">
+                            <h5 class="card-title">Pitch Perfect</h5>
+                            <!--This is my new component-->
+                            <!--This component is called collapse and it is a button that will show and also hide information-->
+                            <!--I am adding this component in all 3 of my movie cards and hiding the plot of the movies by default-->
+                            <!--Users can click on the button I've titled "More..." under each movie to show their plot details-->
+                            <p class="card-text"> 
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pitchperfectmore" aria-expanded="false" aria-controls="collapseExample">
+                                    More...
+                                </button>                                
+                            </p>
+                            <div class="collapse" id="pitchperfectmore">
+                                <div class="card card-body">
+                                    The Barden Bellas are a collegiate, all-girls a cappella singing group thriving on female pop songs and their perfect looks. After a disastrous failing at last year's finals, they are forced to regroup. Among the new recruits is freshman Beca, an independent, aspiring DJ with no interest in the college life.
+                                </div>
+                            </div>
+                            
+                            <span class="badge badge-pill badge-info">12:00pm</span>
+                            <span class="badge badge-pill badge-info">1:30pm</span>
+                            <span class="badge badge-pill badge-info">3:00pm</span>
+                            <span class="badge badge-pill badge-info">5:30pm</span>
+                            <span class="badge badge-pill badge-info">7:00pm</span>
+                            <span class="badge badge-pill badge-info">9:30pm</span>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="./img/freeguy.png" alt="Free Guy">
-                    <div class="card-body">
-                      <h5 class="card-title">Free Guy</h5>
-                      <p class="card-text">A bank teller discovers that he's actually an NPC inside a brutal, open world video game.</p><br>
-                      <span class="badge badge-pill badge-info">12:00pm</span>
-                      <span class="badge badge-pill badge-info">1:30pm</span>
-                      <span class="badge badge-pill badge-info">3:00pm</span>
-                      <span class="badge badge-pill badge-info">5:30pm</span>
-                      <span class="badge badge-pill badge-info">7:00pm</span>
-                      <span class="badge badge-pill badge-info">9:30pm</span>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                <div class="col-sm">
+                    <div class="card" style="width: 20rem;" id="starwars">
+                        <img class="card-img-top" src="./img/starwars.png" alt="Star Wars">
+                        <div class="card-body">
+                            <h5 class="card-title">Star Wars: Revenge of the Sith</h5>
+                            <p class="card-text">
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#starwarsmore" aria-expanded="false" aria-controls="collapseExample">
+                                    More...
+                                </button>
+                            </p>
+                            <div class="collapse" id="starwarsmore">
+                                <div class="card card-body">
+                                    The Jedi Order is on the brink of collapse and Anakin Skywalker no longer believes in the wisdom of his master, Obi-Wan Kenobi. As The Force calls him to decide Padme's fate, Anakin will desperately explore every possibility to save his wife from imminent death in childbirth.
+                                </div>
+                            </div>
+                            <span class="badge badge-pill badge-info">12:00pm</span>
+                            <span class="badge badge-pill badge-info">1:30pm</span>
+                            <span class="badge badge-pill badge-info">3:00pm</span>
+                            <span class="badge badge-pill badge-info">5:30pm</span>
+                            <span class="badge badge-pill badge-info">7:00pm</span>
+                            <span class="badge badge-pill badge-info">9:30pm</span>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 20rem;" id="freeguy">
+                        <img class="card-img-top" src="./img/freeguy.png" alt="Free Guy">
+                        <div class="card-body">
+                            <h5 class="card-title">Free Guy</h5>
+                            <p class="card-text">
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#freeguymore" aria-expanded="false" aria-controls="collapseExample">
+                                    More...
+                                </button>
+                            </p>
+                            <div class="collapse" id="freeguymore">
+                                <div class="card card-body">
+                                    A bank teller discovers that he's actually an NPC inside a brutal, open world video game.
+                                </div>
+                            </div>
+                            <span class="badge badge-pill badge-info">12:00pm</span>
+                            <span class="badge badge-pill badge-info">1:30pm</span>
+                            <span class="badge badge-pill badge-info">3:00pm</span>
+                            <span class="badge badge-pill badge-info">5:30pm</span>
+                            <span class="badge badge-pill badge-info">7:00pm</span>
+                            <span class="badge badge-pill badge-info">9:30pm</span>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!--jumbotron heading-->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+            <div class="container">
+                <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:roboto;font-weight:900;text-transform:uppercase;">
+                Movie Deals</h1>
+                <p class="lead">Check out our monthly deals...</p>
+                <!--movie deals-->
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our monthly movie deals!</button>
+                <!--end movie deals-->
+            </div>
+        </div>
+        <!--end jumobotron heading-->
+        
         <!-- END SHOWTIMES -->
         <div class="text-center" id="deals">
             <form>
@@ -145,7 +190,10 @@
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie reward deals!">
+                    Sign up!
+                  </button>
+                  
             </form>
         </div>
         
@@ -165,7 +213,49 @@
                 </li>
             </ul>
         </div>
+    </div>
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Register to receive movie deals...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="lastname"> Last Name:</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email...">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -173,5 +263,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+    </script>
   </body>
 </html>
